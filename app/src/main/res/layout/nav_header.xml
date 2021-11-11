@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:layout_marginStart="16dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/img_1"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/nav_user"
+        android:paddingTop="8dp"
+        android:textSize="20dp"
+        android:text="userName userLastN"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+
+        android:paddingTop="8dp"
+        android:textSize="16dp"
+        android:text="user@gmail.com"
+
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/nav"/>
+
+</LinearLayout>
