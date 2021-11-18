@@ -1,5 +1,7 @@
 package com.example.app1
 
+
+import android.app.Dialog
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -9,6 +11,10 @@ import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.afterlogin.*
+import kotlinx.android.synthetic.main.modal_update.*
 import org.jetbrains.anko.find
 
 class MainActivity2 : AppCompatActivity() {
@@ -26,6 +32,7 @@ class MainActivity2 : AppCompatActivity() {
    var registration_layout: LinearLayout?=null
     var layout_new: LinearLayout?=null
     var checkBox:CheckBox?=null
+    var rvItemsListt: RecyclerView?=null
 
 
     lateinit var sharedPreferences: SharedPreferences
@@ -57,6 +64,7 @@ class MainActivity2 : AppCompatActivity() {
        login_mail=findViewById(R.id.loginmail)
        login_password=findViewById(R.id.loginpassword)
         checkBox=findViewById(R.id.checkBox)
+         rvItemsListt=findViewById(R.id.rvItemsListt)
 
 //        Log.d("INFO?????????", mail?.text.toString() )
         var total=""
@@ -72,20 +80,35 @@ class MainActivity2 : AppCompatActivity() {
 
         saveButton?.setOnClickListener(){
 
-            dbHelper.insertUserData(name?.text.toString(),mail?.text.toString(), password?.text.toString())
-            showLogin()
+
+            if (!(name?.text?.isEmpty()!! && mail?.text?.isEmpty()!!)) {
+                val status =
+                    dbHelper.insertUserData(name?.text.toString(),mail?.text.toString(), password?.text.toString())
+                if (status > -1) {
+                    Toast.makeText(applicationContext, "Record saved", Toast.LENGTH_LONG).show()
+                    showLogin()
+                }
+            } else {
+                Toast.makeText(
+                    applicationContext,
+                    "Name or Email cannot be blank",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+
+
 
 
         }
         buttonLogin?.setOnClickListener( ){
 
             if (dbHelper.userIsInDB(login_mail?.text.toString(),login_password?.text.toString())){
-                Toast.makeText(this, "KEK", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "no user", Toast.LENGTH_SHORT).show()
             }
             else{
 
                 val usermail=login_mail?.text.toString()
-                    Log.d("INFO?????????", usermail )
+
 
                 val checked: Boolean? =checkBox?.isChecked
                 val editor :SharedPreferences.Editor=sharedPreferences.edit()
@@ -94,13 +117,15 @@ class MainActivity2 : AppCompatActivity() {
                 editor.apply()
 
                 val intent = Intent(this@MainActivity2, New::class.java)
-               intent.putExtra("usermail",usermail.toString())
+                intent.putExtra("usermail",usermail.toString())
                 startActivity(intent)
                 Toast.makeText(this, "LOL", Toast.LENGTH_SHORT).show()
          }
 
         }
+
     }
+
 
     fun showRegistration(){
         layout_new?.visibility=View.INVISIBLE
@@ -118,4 +143,10 @@ class MainActivity2 : AppCompatActivity() {
 
 
 
-}
+
+
+
+
+
+
+    }

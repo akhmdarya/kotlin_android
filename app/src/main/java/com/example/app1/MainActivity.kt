@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        user_field=findViewById(R.id.user_field)
+//        user_field=findViewById(R.id.user_field)
         button=findViewById(R.id.button)
         result_info=findViewById(R.id.result_info)
         textView=findViewById(R.id.textView)

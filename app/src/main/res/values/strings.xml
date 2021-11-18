@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">app1</string>
+    <string name="app_name">IITU MODULE</string>
     <string name="logo">Adviser\'s journal</string>
     <string name="text_field">Enter the group</string>
-    <string name="button">Find the group</string>
+    <string name="button">Log In!</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
 </resources>

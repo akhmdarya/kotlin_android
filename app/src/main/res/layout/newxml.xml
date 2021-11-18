@@ -12,17 +12,17 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textViewNum"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="54dp"
-            android:text="0"
-            android:textAlignment="center"
-            android:textSize="72sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+<!--        <TextView-->
+<!--            android:id="@+id/textViewNum"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="54dp"-->
+<!--            android:text="0"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textSize="72sp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
 
         <EditText
@@ -44,6 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
             android:hint="Password"
+            android:inputType="textPassword"
             android:textAlignment="center"
             android:textSize="20sp" />
 
@@ -64,8 +65,8 @@
         <Button
             android:id="@+id/buttonRegister"
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="123dp"
+            android:layout_height="61dp"
             android:layout_gravity="center"
             android:layout_marginTop="70dp"
             android:text="Register" />
