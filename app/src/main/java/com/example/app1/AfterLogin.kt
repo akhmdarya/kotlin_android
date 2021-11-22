@@ -14,7 +14,10 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.app1.fragments.firstFragment
+import com.example.app1.fragments.secondFragment
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.afterlogin.*
 import kotlinx.android.synthetic.main.modal_update.*
@@ -28,6 +31,7 @@ class New : AppCompatActivity() {
 
     var textPref:TextView?=null
     var buttonLogOut:Button?=null
+    var but_navigate:Button?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.afterlogin)
@@ -38,6 +42,7 @@ class New : AppCompatActivity() {
 
         val drawerLayout:DrawerLayout=findViewById(R.id.drawerLayout)
         val navigationView : NavigationView =findViewById(R.id.navigation)
+
         toogle=ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)
         drawerLayout.addDrawerListener(toogle)
         toogle.syncState()
@@ -62,8 +67,18 @@ class New : AppCompatActivity() {
         }
 
 
+
+
         textPref=findViewById(R.id.textPref)
         buttonLogOut=findViewById(R.id.buttonLogOut)
+        but_navigate=findViewById(R.id.but_navigate)
+
+        but_navigate?.setOnClickListener(){
+            val intent = Intent(this@New, NavPage1::class.java)
+
+
+            startActivity(intent)
+        }
 
 
         preferences=getSharedPreferences("SHARED_PREF",Context.MODE_PRIVATE)
@@ -93,6 +108,7 @@ class New : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
 
 
 

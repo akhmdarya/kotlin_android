@@ -7,9 +7,22 @@
 
     android:layout_height="match_parent">
 
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/but_navigate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="go to navigate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.191" />
 
         <TextView
             android:id="@+id/textPref"
@@ -39,18 +52,16 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-
-
-    <LinearLayout
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
         android:padding="10dp">
 
     </LinearLayout>
@@ -82,5 +93,6 @@
         app:menu="@menu/nav"
         android:fitsSystemWindows="true"
         android:layout_gravity="start" />
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
