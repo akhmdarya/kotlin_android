@@ -2,11 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/menu_home"
+        android:name="android:actionMenuTextColor"
 
     android:icon="@drawable/ic_baseline_login_24"
         android:title="Home"/>
     <item
+        android:name="android:actionMenuTextColor"
         android:id="@+id/menu_set"
         android:icon="@drawable/ic_baseline_settings_applications_24"
         android:title="Settings"/>
+
 </menu>
