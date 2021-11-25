@@ -22,6 +22,12 @@
         <activity
             android:name=".New"
             android:exported="false" />
+        <activity
+            android:name=".fragments.firstFragment"
+            android:exported="false" />
+        <activity
+            android:name=".fragments.secondFragment"
+            android:exported="false" />
 <!--        <activity-->
 <!--            android:name=".EmpModelClass"-->
 <!--            android:exported="false"-->

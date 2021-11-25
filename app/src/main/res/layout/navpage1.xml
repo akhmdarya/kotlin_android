@@ -6,25 +6,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".NavPage1">
 
-<!--    <FrameLayout-->
-<!--        android:id="@+id/fl_wrapper"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_above="@+id/bottom_navigation"/>-->
 
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+
+    <FrameLayout
         android:id="@+id/fl_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_marginBottom="139dp" />
 
-        />
-<!--    <fragment-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        app:navGraph="@navigation/mobile_navigation"-->
-<!--        app:defaultNavHost="true"-->
-<!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
-<!--        />-->
+    <Button
+        android:layout_width="285dp"
+        android:layout_height="62dp"
+        android:layout_above="@+id/bottom_navigation"
+
+        android:layout_marginBottom="557dp"
+        android:text="Button from activity"
+        android:textColor="@color/teal_200" />
+
+    <TextView
+        android:id="@+id/recText"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="578dp"
+        android:text="Helloooo" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"

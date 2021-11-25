@@ -36,10 +36,10 @@ class MainActivity : AppCompatActivity() {
             val countString=textView?.text.toString()
             val count = Integer.parseInt(countString)
 
-            intent.putExtra("total",count.toString())
+//            intent.putExtra("total",count.toString())
 
             startActivity(intent)
-          //  Toast.makeText(this,"${new_text?.text}",Toast.LENGTH_LONG).show()
+            Toast.makeText(this,"!!!!!!!!!!",Toast.LENGTH_LONG).show()
 
 //            if (user_field?.text?.toString()?.trim()?.equals("")!!){
 //                Toast.makeText(this,"Введите url",Toast.LENGTH_LONG).show()

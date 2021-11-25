@@ -9,11 +9,40 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
+
+        <Button
+            android:id="@+id/btn_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="185dp"
+            android:text="open camera" />
+
+        <ImageView
+            android:id="@+id/image_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:text="SecondPage" />
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="478dp" />
+
+        <TextView
+            android:id="@+id/get_text"
+            android:layout_width="97dp"
+            android:layout_height="68dp"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="69dp"
+            android:text="tezt"
+            android:textColor="@color/black"
+            android:textSize="13dp" />
+        <!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:text="SecondPage" />-->
     </RelativeLayout>
 
 </FrameLayout>
