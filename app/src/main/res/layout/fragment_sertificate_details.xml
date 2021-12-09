@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sertificateDetails"
+    tools:context=".fragments.sertificateDetails">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        tools:context=".infoactivities.InfoActivity">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/firstCardView"
+            android:layout_width="370dp"
+            android:layout_height="310dp"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/imageViewInfo"
+                    android:layout_width="245dp"
+                    android:layout_height="209dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/appeal_applic" />
+
+                <TextView
+                    android:id="@+id/sertNameinInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageViewInfo"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Sertificate Name"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sertPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageViewInfo"
+                    android:layout_alignRight="@+id/sertNameinInfo"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="42dp"
+                    android:layout_marginEnd="138dp"
+                    android:layout_marginRight="138dp"
+                    android:text="$3 per applic"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            android:id="@+id/secondCardView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/firstCardView">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/addquantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="130dp"
+                    android:background="@drawable/plus" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/quantityInfo"
+                    android:textSize="28sp"
+                    android:layout_toRightOf="@+id/addquantity"/>
+
+
+                <ImageButton
+                    android:id="@+id/subquantity"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@+id/quantityInfo"
+                    android:background="@drawable/minus" />
+
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/radioGroup"
+                    android:layout_below="@id/subquantity">
+
+
+<!--                    <RadioButton-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Hot"-->
+<!--                        android:layout_marginRight="10dp"-->
+<!--                        android:id="@+id/hotradioButton"/>-->
+
+<!--                    <RadioButton-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Iced"-->
+<!--                        android:id="@+id/coldRadioButton"/>-->
+
+                </RadioGroup>
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/addToppings"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/radioGroup"-->
+<!--                    android:text="Toppings $3" />-->
+
+                <CheckBox
+                    android:id="@+id/addSert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/radioGroup"
+                    android:text="Add Extra Certifiacte $2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/military_registr"
+                    android:id="@+id/descriptioninfo"
+                    android:textStyle="italic"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/addSert"/>
+
+
+                <Button
+                    android:id="@+id/addtocart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/descriptioninfo"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#3F51B5"
+                    android:text="Add to cart"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

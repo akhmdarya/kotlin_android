@@ -7,40 +7,15 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="448dp"
-        android:layout_gravity="center"
-
-        >
-
-
-        <TextView
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:visibility="visible"
+            tools:visibility="gone"
             android:layout_width="match_parent"
-            android:layout_height="345dp"
-            android:gravity="center"
-            android:text="FirstPage" />
-
-        <Button
-            android:layout_width="180dp"
-            android:id="@+id/but_to_fr"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="106dp"
-            android:layout_marginEnd="107dp"
-            android:layout_marginBottom="282dp"
-            android:text="send to fr 2" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/but_to_main"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="127dp"
-            android:layout_marginEnd="121dp"
-            android:layout_marginBottom="193dp"
-            android:text="send to main" />
+            android:layout_height="match_parent"/>
     </RelativeLayout>
+
+
 </FrameLayout>

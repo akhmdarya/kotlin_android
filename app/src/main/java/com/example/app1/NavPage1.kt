@@ -29,11 +29,11 @@ class NavPage1 : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        dataModel.message.observe(this,{
-            binding.recText.text=it
-
-
-        })
+//        dataModel.message.observe(this,{
+//            binding.recText.text=it
+//
+//
+//        })
         val firstFragment= firstFragment()
         val secondFragment= secondFragment()
         makeCurrentFragment(firstFragment)

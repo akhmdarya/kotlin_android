@@ -1,21 +1,17 @@
 package com.example.app1
 
 
-import android.app.Dialog
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.*
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.app1.db.DBHelper
 import kotlinx.android.synthetic.main.afterlogin.*
 import kotlinx.android.synthetic.main.modal_update.*
-import org.jetbrains.anko.find
 
 class MainActivity2 : AppCompatActivity() {
     private lateinit var dbHelper: DBHelper

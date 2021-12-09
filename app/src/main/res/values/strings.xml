@@ -6,5 +6,10 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="place_of_study">Сertificate from the place of study</string>
+    <string name="military_registr">Сertificate from the military registration and enlistment office</string>
+    <string name="appeal_applic">Application for appeal</string>
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

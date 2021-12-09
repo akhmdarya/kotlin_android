@@ -14,10 +14,10 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.app1.fragments.firstFragment
-import com.example.app1.fragments.secondFragment
+import com.example.app1.adapters.ItemAdapter
+import com.example.app1.datamodels.EmpModelClass
+import com.example.app1.db.DBHelper
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.afterlogin.*
 import kotlinx.android.synthetic.main.modal_update.*
@@ -131,7 +131,7 @@ class New : AppCompatActivity() {
             // Set the LayoutManager that this RecyclerView will use.
             rvItemsListt?.layoutManager = LinearLayoutManager(this)
             // Adapter class is initialized and list is passed in the param.
-            val itemAdapter = ItemAdapter(this, getItemsList())
+           val itemAdapter = ItemAdapter(this, getItemsList())
             // adapter instance is set to the recyclerview to inflate the items.
             rvItemsListt?.adapter = itemAdapter
         } else {

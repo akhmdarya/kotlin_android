@@ -1,4 +1,4 @@
-package com.example.app1
+package com.example.app1.db
 
 import android.annotation.SuppressLint
 import android.content.ContentValues
@@ -8,13 +8,13 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteException
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
-import android.widget.Toast
+import com.example.app1.datamodels.EmpModelClass
 
 
 class DBHelper(
     context: Context?,
 
-) : SQLiteOpenHelper(context, DATABASE_NAME,FACTORY, DATABASE_VERSION) {
+) : SQLiteOpenHelper(context, DATABASE_NAME, FACTORY, DATABASE_VERSION) {
     companion object{
         var DATABASE_VERSION=1
         var DATABASE_NAME="usersDB"
@@ -28,13 +28,22 @@ class DBHelper(
 
 
     override fun onCreate(db: SQLiteDatabase?) {
-        db?.execSQL("create table "+ TABLE_USERS+"("+ KEY_ID+" integer primary key autoincrement,"
-                + KEY_NAME+ " text,"+ KEY_MAIL+" text,"+  KEY_PASSWORD+ " text"+")")
+        db?.execSQL("create table "+ TABLE_USERS +"("+ KEY_ID +" integer primary key autoincrement,"
+                + KEY_NAME + " text,"+ KEY_MAIL +" text,"+  KEY_PASSWORD + " text"+")")
+        db?.execSQL( "create table "+OrderContract.OrderEntry.TABLE_NAME + "(" +
+                OrderContract.OrderEntry._ID+" integer primary key autoincrement, " +
+                OrderContract.OrderEntry.COLUMN_NAME + " text not null, "+
+                OrderContract.OrderEntry.COLUMN_QUANTITY+ " text not null," +
+                OrderContract.OrderEntry.COLUMN_PRICE+ " text not null,"+
+                OrderContract.OrderEntry.COLUMN_EXTRA_SERT + " text not null"+ ")")
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db?.execSQL("drop table if exists "+ TABLE_USERS)
+        db?.execSQL("drop table if exists "+ OrderContract.OrderEntry.TABLE_NAME)
+
         onCreate(db)
+
     }
 
     fun insertUserData(name:String, mail:String,password:String):Long{
@@ -138,6 +147,9 @@ class DBHelper(
         db.close()
         return success
     }
+
+
+
 
 
 
